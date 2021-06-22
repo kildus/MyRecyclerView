@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitleSurplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Излишки"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSurplus"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSurplus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSurplus" />
+
+    <TextView
+        android:id="@+id/textViewTitleFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Найдено"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFound"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFound"
+        app:layout_constraintTop_toTopOf="@+id/imageViewFound" />
+
+    <ImageView
+        android:id="@+id/imageViewFound"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="101dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNotFound"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/imageViewSurplus"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="102dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFound"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/presence_busy" />
+
+    <ImageView
+        android:id="@+id/imageViewNotFound"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/presence_invisible" />
+
+    <TextView
+        android:onClick="onClickNotFound"
+        android:id="@+id/textViewTitleNotFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Не найдено"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNotFound"
+        app:layout_constraintStart_toEndOf="@+id/imageViewNotFound"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNotFound" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFound" />
+
+    <EditText
+        android:id="@+id/editTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_add_text"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/putTextButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/putTextButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        app:icon="@android:drawable/ic_media_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextView" />
+
+    <TextView
+        android:id="@+id/textViewNotFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleNotFound"
+        app:layout_constraintStart_toStartOf="@+id/imageViewNotFound"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNotFound" />
+
+    <TextView
+        android:id="@+id/textViewSurplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleSurplus"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSurplus"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSurplus" />
+
+    <TextView
+        android:id="@+id/textViewFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleFound"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFound"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFound" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

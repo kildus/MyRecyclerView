@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyRecyclerView</string>
+    <string name="already_added">Уже добавлено</string>
+    <string name="is_found">Найдено</string>
+    <string name="is_surplus">Излишек</string>
+    <string name="deleted">Удалено: </string>
+    <string name="hint_add_text">Введите штрихкод</string>
+</resources>
